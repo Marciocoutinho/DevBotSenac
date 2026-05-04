@@ -50,3 +50,21 @@ header {
   gap: 8px;
   color: var(--primary);
 }
+
+.logo h1 {
+  font-size: 22px;
+}
+
+.close {
+  color: var(--primary);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+main {
+  height: 480px;
+  overflow-y: auto;
+  padding: 30px 20px 30px;
+}
