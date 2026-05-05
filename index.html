@@ -14,6 +14,9 @@
       src="https://kit.fontawesome.com/296319095b.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="script.js" defer></script>
+
     <title>DevBot</title>
   </head>
   <body>
@@ -24,7 +27,7 @@
           <h1>DevBot</h1>
         </div>
 
-        <button class="close">
+        <button class="close" onclick="handleCloseChat()">
           <i class="fa-solid fa-xmark fa-xl"></i>
         </button>
       </header>
@@ -43,15 +46,17 @@
           placeholder="Insira uma mensagem..."
           rows="1"
           required
+          oninput="handleAutoSize()"
+          onkeydown="handleChatOnKeyDown(event)"
         ></textarea>
 
-        <button class="send-message">
+        <button class="send-message" onclick="handleChat()">
           <i class="fa-regular fa-paper-plane"></i>
         </button>
       </footer>
     </div>
 
-    <button class="toggler">
+    <button class="toggler" onclick="handleTogglerChat()">
       <i class="fa-regular fa-message fa-xl"></i>
       <i class="fa-solid fa-xmark fa-xl"></i>
     </button>
