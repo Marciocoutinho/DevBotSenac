@@ -4,7 +4,7 @@ const initialTextareaHeight = textarea.scrollHeight;
 
 //Botão para abrir o chat
 async function createBotReplay(content) {
-  const response = await fetch("/chat", {
+  const response = await fetch("/api/chat", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
